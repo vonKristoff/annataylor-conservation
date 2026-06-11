@@ -1,0 +1,44 @@
+---
+interface Props {
+  ctx?: string;
+  size?: string;
+  weight?: string;
+  colour?: string;
+  src?: string;
+  nostroke?: string;
+  aria?: string;
+}
+const {
+  ctx,
+  weight = "2",
+  size = "1",
+  colour = "currentColor",
+  src = "sprites",
+  nostroke,
+  aria,
+} = Astro.props;
+const href = `/${src}.svg#icon-${ctx}`;
+---
+
+<svg
+  width={`${size}`}
+  height={`${size}`}
+  fill="none"
+  stroke={nostroke ? "none" : colour}
+  stroke-width={weight}
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  {...aria && { "aria-hidden": "true" }}
+>
+  <use {href}></use>
+</svg>
+
+<style>
+  i {
+    width: fit-content;
+  }
+  i svg {
+    width: 100%;
+    height: 100%;
+  }
+</style>

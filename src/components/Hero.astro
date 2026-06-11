@@ -1,0 +1,69 @@
+---
+// Hero.astro
+const words = ["Sculpture", "Conservation", "Restoration"];
+---
+
+<div class="hero" id="hero-container">
+  <span class="word text-primary-200 font-bricolage"> Sculpture </span>
+  <span class="word text-primary-200 font-display"> Conservation </span>
+  <span class="word text-primary-200 font-limelight"> Restoration </span>
+</div>
+
+<style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    min-height: 90dvh;
+  }
+
+  .word {
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  function fitWordsToWidth() {
+    const container = document.getElementById("hero-container");
+    const words = container.querySelectorAll(".word");
+
+    words.forEach((word) => {
+      // Reset to measure properly
+      word.style.fontSize = "";
+
+      const parentWidth = word.parentElement.clientWidth;
+      let fontSize = 300; // Start very large
+      word.style.fontSize = fontSize + "px";
+
+      // Binary search for better performance with long words
+      let min = 0;
+      let max = fontSize;
+
+      while (min <= max) {
+        const mid = Math.floor((min + max) / 2);
+        word.style.fontSize = mid + "px";
+
+        if (word.scrollWidth <= parentWidth) {
+          min = mid + 1;
+        } else {
+          max = mid - 1;
+        }
+      }
+
+      word.style.fontSize = max + "px";
+    });
+  }
+
+  // Astro lifecycle events
+  document.addEventListener("astro:page-load", fitWordsToWidth);
+  document.addEventListener("astro:after-swap", fitWordsToWidth);
+  window.addEventListener("resize", fitWordsToWidth);
+
+  // Initial load
+  fitWordsToWidth();
+</script>

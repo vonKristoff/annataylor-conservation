@@ -1,0 +1,38 @@
+---
+import Icon from "./Icon.astro";
+const currentPath = Astro.url.pathname;
+const isHome = currentPath === "/" || currentPath === "";
+
+const pageTitles = {
+  gallery: "Gallery",
+};
+const getPageTitle = () => {
+  const slug = currentPath.split("/").pop() || "";
+  return pageTitles[slug] || slug.replace(/-/g, " ");
+};
+---
+
+<nav class="p-4 flex fixed w-full">
+  <aside class="shrink-0">
+    <span data-selotape class="text-primary-200 font-display backdrop-blur-2xl"
+      >Anna Taylor Conservation</span
+    >
+  </aside>
+  <div
+    class="grow flex font-bricolage text-primary-200 text-4xl justify-center"
+  >
+    <!-- <span>{getPageTitle()}</span> -->
+  </div>
+  <aside class="shrink-0 relative flex">
+    <!-- <Icon ctx="cube" size="8em" nostroke /> -->
+    <div class="transform rotate-[-20deg]">
+      <Icon ctx="cone" size="6em" nostroke />
+    </div>
+  </aside>
+</nav>
+<style>
+  [data-selotape] {
+    padding: 1em;
+    background-color: #ff00001f;
+  }
+</style>
