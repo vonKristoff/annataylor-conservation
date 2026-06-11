@@ -1,15 +1,19 @@
 :root {
-	--font-noto: 'Noto Serif', serif;
-	--font-roboto: 'Roboto', sans-serif;
-	--font-manrope: 'Manrope', sans-serif;
-	--font-overpass: 'Overpass', sans-serif;
-	--font-overpass-mono: 'Overpass Mono', sans-serif;
+  --font-noto: "Noto Serif", serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+  --font-overpass-mono: "Overpass Mono", sans-serif;
 }
 
 @theme {
-	--font-primary: var(--font-overpass);
-	--font-secondary: var(--font-manrope);
-	--font-mono: var(--font-overpass-mono);
-	--font-heading: var(--font-noto);
-	--font-paragraph: var(--font-roboto);
+  --font-bricolage: "Bricolage Grotesque", sans-serif;
+  --font-limelight: "Limelight", sans-serif;
+  --font-display: "Major Mono Display", monospace;
+  --font-overpass: "Overpass", sans-serif;
+  --font-primary: var(--font-noto);
+  --font-secondary: var(--font-manrope);
+  --font-tertiary: var(--font-roboto);
+  --font-mono: var(--font-display);
+  --font-heading: var(--font-noto);
+  --font-paragraph: var(--font-roboto);
 }

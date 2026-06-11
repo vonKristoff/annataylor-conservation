@@ -1,7 +1,88 @@
 ---
 import Layout from "./layout.astro";
+import Hero from "$lib/components/Hero.astro";
+import Icon from "$lib/components/Icon.astro";
 ---
 
 <Layout title="" description="">
-  <h1>Anna Taylor Conservation</h1>
+  <Hero />
+  <section class="content-grid bg-gray-100 px-8 md:px-0 pt-12 text-lg">
+    <h1 class="wide">
+      Specialist in the conservation, repair and cleaning of sculptural works of
+      art and objects.
+    </h1>
+    <div class="flex gap-8 items-center">
+      <Icon ctx="vase" size="15em" />
+      <div class="flex flex-col">
+        <p class="text-primary-200">
+          Providing museum level conservation and restoration services for
+          private clients and larger organisations.
+        </p>
+        <p class="">
+          Working on a diverse variety of materials and objects, carrying out
+          practical conservation as well as condition surveys, treatment records
+          and recommendations.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="content-grid bg-gray-100 px-8 md:px-0 pb-12">
+    <div class="wide text-primary-200 grid grid-cols-2 gap-12">
+      <aside class="rounded-full w-fit overflow-clip">
+        <img class="object-fit" src="/HEADSHOT.webp" alt="anna taylor" />
+      </aside>
+      <div class="content flex flex-col justify-center text-lg gap-4">
+        <p>
+          <span class="font-display">Anna</span> is a British conservator with over
+          20 years’ experience in practical conservation and restoration, 13 years
+          with private conservation companies, working on sculptural works of art,
+          from ancient to contemporary, and large scale architectural projects.
+        </p>
+
+        <p>
+          7 years prior to this working in stone and historic building
+          conservation on many prestigious buildings including Westminster Abbey
+          and The Tower of London and Hampton Court Palace.
+        </p>
+
+        <p>
+          She has worked for private collectors, auction houses, insurers,
+          commercial galleries, artist’s estates, foundations and public
+          institutions and has been involved in the installation of many complex
+          collections and exhibitions in the UK and worldwide.
+        </p>
+        <div class="relative self-end">
+          <div
+            class="absolute right-0 transform translate-x-16 translate-y-[-5em]"
+          >
+            <Icon ctx="paintbrush" size="8em" nostroke />
+          </div>
+        </div>
+        <div class="flex flex-col justify-end py-8">
+          <button
+            class="btn-primary hover:bg-accent-200 self-end bg-primary-200 text-amber-50 flex font-bricolage text-3xl justify-center"
+          >
+            <div class="flex gap-4 items-center">
+              contact by email
+              <Icon ctx="send" size="1em" />
+            </div>
+          </button>
+        </div>
+        <p class="self-end">
+          <span class="font-display">Anna</span> is a member of <a
+            href=""
+            class="link">The Nordisk Konservator Forbund</a
+          >.
+        </p>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  @reference "$lib/styles/index.css";
+  button {
+    transition: all 0.3s;
+    @apply border-transparent;
+  }
+</style>
