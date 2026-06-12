@@ -36,7 +36,6 @@ const words = ["Sculpture", "Conservation", "Restoration"];
     words.forEach((word) => {
       // Reset to measure properly
       word.style.fontSize = "";
-
       const parentWidth = word.parentElement.clientWidth;
       let fontSize = 300; // Start very large
       word.style.fontSize = fontSize + "px";
@@ -68,4 +67,7 @@ const words = ["Sculpture", "Conservation", "Restoration"];
 
   // Initial load
   fitWordsToWidth();
+  setTimeout(() => {
+    fitWordsToWidth();
+  }, 1000);
 </script>
