@@ -64,6 +64,7 @@ const words = ["Sculpture", "Conservation", "Restoration"];
   document.addEventListener("astro:page-load", fitWordsToWidth);
   document.addEventListener("astro:after-swap", fitWordsToWidth);
   window.addEventListener("resize", fitWordsToWidth);
+  document.addEventListener("DOMContentLoaded", fitWordsToWidth);
 
   // Initial load
   fitWordsToWidth();
