@@ -6,6 +6,9 @@
     @apply text-black;
     @apply font-secondary;
   }
+  main {
+    overflow-x: hidden;
+  }
 }
 
 @layer base {
