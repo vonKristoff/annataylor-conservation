@@ -7,7 +7,7 @@ import Icon from "$lib/components/Icon.astro";
 <Layout title="" description="">
   <Hero />
   <section class="content-grid bg-gray-100 px-8 md:px-0 pt-12 text-lg">
-    <h1 class="wide">
+    <h1 class="wide text-3xl md:text-6xl">
       Specialist in the conservation, repair and cleaning of sculptural works of
       art and objects.
     </h1>
@@ -27,8 +27,8 @@ import Icon from "$lib/components/Icon.astro";
     </div>
   </section>
   <section class="content-grid bg-gray-100 px-8 md:px-0 pb-12">
-    <div class="wide text-primary-200 grid grid-cols-2 gap-12">
-      <aside class="rounded-full w-fit overflow-clip">
+    <div class="wide text-primary-200 grid grid-cols-1 md:grid-cols-2 gap-12">
+      <aside data-headshot class="rounded-full w-fit overflow-clip md:h-fit">
         <img class="object-fit" src="/HEADSHOT.webp" alt="anna taylor" />
       </aside>
       <div class="content flex flex-col justify-center text-lg gap-4">
@@ -84,5 +84,14 @@ import Icon from "$lib/components/Icon.astro";
   button {
     transition: all 0.3s;
     @apply border-transparent;
+  }
+  [data-headshot] {
+    @media (max-width: 767px) {
+      width: calc(100vw - 4em);
+      height: calc(100vw - 4em);
+      img {
+        transform: translateY(-10%);
+      }
+    }
   }
 </style>

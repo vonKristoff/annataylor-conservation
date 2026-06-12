@@ -12,9 +12,11 @@ const getPageTitle = () => {
 };
 ---
 
-<nav class="p-4 flex fixed w-full">
+<nav class="p-4 flex fixed w-full items-center z-10 top-0">
   <aside class="shrink-0">
-    <span data-selotape class="text-primary-200 font-display backdrop-blur-2xl"
+    <span
+      data-selotape
+      class="flex text-primary-200 font-display rounded-br-2xl rounded-tr-2xl"
       >Anna Taylor Conservation</span
     >
   </aside>
@@ -23,16 +25,19 @@ const getPageTitle = () => {
   >
     <!-- <span>{getPageTitle()}</span> -->
   </div>
-  <aside class="shrink-0 relative flex">
+  <aside class="shrink-0 relative text-primary-200 font-display">
+    <a data-selotape class="link" href="/gallery">gallery</a>
     <!-- <Icon ctx="cube" size="8em" nostroke /> -->
-    <div class="transform rotate-[-20deg]">
+    <!-- <div class="transform rotate-[-20deg]">
       <Icon ctx="cone" size="6em" nostroke />
-    </div>
+    </div> -->
   </aside>
 </nav>
 <style>
   [data-selotape] {
+    border: 1px solid;
     padding: 1em;
     background-color: #ff00001f;
+    backdrop-filter: blur(1em);
   }
 </style>
