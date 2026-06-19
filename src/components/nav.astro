@@ -4,7 +4,7 @@ const currentPath = Astro.url.pathname;
 const isHome = currentPath === "/" || currentPath === "";
 
 const pageTitles = {
-  gallery: "Gallery",
+  gallery: "GALLERY",
 };
 const getPageTitle = () => {
   const slug = currentPath.split("/").pop() || "";
@@ -17,8 +17,8 @@ const getPageTitle = () => {
     <a
       href="/"
       data-selotape
-      class="flex text-primary-200 font-display rounded-br-2xl rounded-tr-2xl"
-      >Anna Taylor Conservation</a
+      class="flex text-primary-200 rounded-br-2xl font-light rounded-tr-2xl"
+      >ANNA TAYLOR CONSERVATION</a
     >
   </aside>
   <div
@@ -26,8 +26,14 @@ const getPageTitle = () => {
   >
     <!-- <span>{getPageTitle()}</span> -->
   </div>
-  <aside class="shrink-0 relative text-primary-200 font-display">
-    <a data-selotape class="link" href="/gallery">gallery</a>
+  <aside class="shrink-0 relative font-light text-primary-200 pr-4">
+    {
+      getPageTitle() !== "GALLERY" && (
+        <a class="link" href="/gallery">
+          GALLERY
+        </a>
+      )
+    }
     <!-- <Icon ctx="cube" size="8em" nostroke /> -->
     <!-- <div class="transform rotate-[-20deg]">
       <Icon ctx="cone" size="6em" nostroke />

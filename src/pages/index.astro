@@ -1,80 +1,105 @@
 ---
 import Layout from "./layout.astro";
 import Hero from "$lib/components/Hero.astro";
-import Icon from "$lib/components/Icon.astro";
+import Logo from "$lib/assets/nfk.svg?url";
 ---
 
 <Layout title="" description="">
   <Hero />
-  <section class="content-grid bg-gray-100 px-8 md:px-0 pt-12 text-lg">
-    <h1 class="wide text-3xl md:text-6xl">
+  <section class="content-grid bg-grey px-8 md:px-0 text-lg py-24">
+    <h1 class="text-3xl md:text-4xl">
       Specialist in the conservation, repair and cleaning of sculptural works of
       art and objects.
     </h1>
     <div class="flex gap-8 items-center">
-      <Icon ctx="vase" size="15em" />
-      <div class="flex flex-col">
-        <p class="text-primary-200">
-          Providing museum level conservation and restoration services for
-          private clients and larger organisations.
-        </p>
-        <p class="">
-          Working on a diverse variety of materials and objects, carrying out
-          practical conservation as well as condition surveys, treatment records
-          and recommendations.
-        </p>
-      </div>
+      <!-- <Icon ctx="vase" size="15em" /> -->
+      <!-- <div class="flex flex-col"> -->
+      <p class="text-primary-200">
+        Providing museum level conservation and restoration services. Working on
+        a diverse variety of materials and objects, carrying out practical
+        conservation as well as condition assessments, treatment proposals and
+        estimates and recommendations.
+      </p>
+      <!-- </div> -->
     </div>
   </section>
-  <section class="content-grid bg-gray-100 px-8 md:px-0 pb-12">
+  <section class="content-grid px-8 md:px-0 py-12">
     <div class="wide text-primary-200 grid grid-cols-1 md:grid-cols-2 gap-12">
       <aside data-headshot class="rounded-full w-fit overflow-clip md:h-fit">
         <img class="object-fit" src="/HEADSHOT.webp" alt="anna taylor" />
       </aside>
       <div class="content flex flex-col justify-center text-lg gap-4">
         <p>
-          <span class="font-display">Anna</span> is a British conservator with over
-          20 years’ experience in practical conservation and restoration, 13 years
-          with private conservation companies, working on sculptural works of art,
-          from ancient to contemporary, and large scale architectural projects.
+          Anna is a British conservator with over 20 years' experience in
+          practical conservation and restoration, working on sculptural works of
+          art, from ancient to contemporary, and large scale architectural
+          projects.
         </p>
 
         <p>
-          7 years prior to this working in stone and historic building
-          conservation on many prestigious buildings including Westminster Abbey
-          and The Tower of London and Hampton Court Palace.
-        </p>
-
-        <p>
-          She has worked for private collectors, auction houses, insurers,
+          She has worked with private collectors, auction houses, insurers,
           commercial galleries, artist’s estates, foundations and public
-          institutions and has been involved in the installation of many complex
-          collections and exhibitions in the UK and worldwide.
+          institutions and has been involved in the conservation and
+          installation of many complex collections and exhibitions in the UK and
+          worldwide.
         </p>
-        <div class="relative self-end">
+
+        <div class="flex flex-col justify-end py-12">
+          <button
+            aria-label="copy email to clipboard"
+            data-email="annataylorconservation@gmail.com"
+            class="realtive btn-primary hover:bg-accent-200 self-end bg-primary-200 text-amber-50 flex text-3xl justify-center"
+          >
+            <div class="flex gap-4 items-center">
+              Contact by email
+              <!-- <Icon ctx="send" size="1em" /> -->
+            </div>
+            <div id="toast">✅ Email copied to clipboard</div>
+          </button>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8">
+          <p class="self-end text-sm md:text-lg">
+            Anna is a member of <a href="https://nkf-dk.dk/" class="link"
+              >The Nordisk Konservator Forbund</a
+            >.
+          </p>
+
+          <img src={Logo} alt="NFK logo" class="w-1/2 self-end" />
+        </div>
+        <!-- <div class="relative self-end">
           <div
             class="absolute right-0 transform translate-x-16 translate-y-[-5em]"
           >
             <Icon ctx="paintbrush" size="8em" nostroke />
           </div>
-        </div>
-        <div class="flex flex-col justify-end py-8">
-          <button
-            class="btn-primary hover:bg-accent-200 self-end bg-primary-200 text-amber-50 flex font-bricolage text-3xl justify-center"
-          >
-            <div class="flex gap-4 items-center">
-              contact by email
-              <Icon ctx="send" size="1em" />
-            </div>
-          </button>
-        </div>
-        <p class="self-end">
-          <span class="font-display">Anna</span> is a member of <a
-            href=""
-            class="link">The Nordisk Konservator Forbund</a
-          >.
-        </p>
+        </div> -->
       </div>
+    </div>
+  </section>
+  <section class="content-grid bg-grey items-center">
+    <div class="wide grid grid-cols-1 gap-12 md:grid-cols-2 items-center">
+      <aside class="py-8 px-8 md:px-0">
+        <h3>Notable Artists and collections and buildings:</h3>
+        <p class="uppercase">
+          Anselm Keifer. Damien Hurst. Picasso. Salvador Dali. Barbora Hepworth.
+          Jean Cocteau. Mark Quinn. St Paul’s Cathedral. The Design Museum,
+          London. Hampton Court Palace. London. The Tower of London. The Watts
+          Gallery. Truro Cathedral, Cornwall. The Natural History Museum.
+          Westminster Abbey London. The Cutty Sark. The Rolling Stones
+          Exhibition. The National Army Museum. Buckingham Palace. The Institute
+          of Civil Engineers. Mathaf Arab Museum Of Modern Art, Doha, Qatar.
+          Forsvarsmuseet, Oslo, Norway. St Paul’s Cathedral, Melbourne,
+          Australia. Mougins Museum of Classical Art, Mougins, France.
+        </p>
+      </aside>
+      <aside class="flex justify-center">
+        <img
+          class="max-h-[50vh] md:max-h-[60vh] aspect-square md:aspect-auto object-cover w-full object-top"
+          src="https://images.squarespace-cdn.com/content/v1/65cb6cf17c041c7ba0996dbc/6eb8a32e-f81f-44dc-a2d7-0110c06e6937/ad777f53-8cf8-4eaf-859d-3a6d92053cc9.jpg?format=750w"
+          alt=""
+        />
+      </aside>
     </div>
   </section>
 </Layout>
@@ -94,4 +119,44 @@ import Icon from "$lib/components/Icon.astro";
       }
     }
   }
+  #toast {
+    position: absolute;
+    translate: 0% 0%;
+    margin-bottom: 0.5rem;
+    @apply bg-black text-amber-100 rounded-full;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    pointer-events: none;
+    white-space: nowrap;
+    opacity: 0;
+    transition:
+      opacity 0.3s,
+      translate 0.3s;
+  }
+  #toast.show {
+    opacity: 1;
+    translate: 0% -150%;
+  }
 </style>
+
+<script is:inline>
+  function initToast() {
+    const toast = document.getElementById("toast");
+    const btn = document.querySelector("[data-email]");
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText("annataylorconservation@gmail.com");
+      } catch {}
+      toast.classList.add("show");
+      clearTimeout(toast._hide);
+      toast._hide = setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3000);
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initToast);
+  } else {
+    initToast();
+  }
+</script>

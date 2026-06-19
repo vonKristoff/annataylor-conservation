@@ -3,8 +3,7 @@
     text-align: left;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    @apply text-black;
-    @apply font-secondary;
+    @apply text-black font-single;
   }
   main {
     overflow-x: hidden;
@@ -33,12 +32,12 @@
   h4,
   h5,
   h6 {
-    @apply font-primary;
-    @apply font-bold;
+    /*@apply font-primary;*/
+    /*@apply font-bold;*/
     @apply mb-4;
   }
   p {
-    @apply mb-2;
+    @apply mb-2 font-light;
   }
   p:last-child {
     @apply mb-0;

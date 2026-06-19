@@ -1,9 +1,13 @@
----
-import Icon from "./Icon.astro";
----
-
-<footer class="p-12 bg-primary-200 flex text-amber-100 jusstify-bottom">
-  <aside class="shrink-0 flex">
+<footer
+  class="p-12 bg-primary-200 text-amber-100 justify-bottom gap-12 grid grid-cols-1 md:grid-cols-3"
+>
+  <aside class="shrink-0 flex flex-col order-3 md:order-1">
+    <p>Survey and Treatment of objects.</p>
+    <p><span class="text-primary-300">Including works fabricated in:</span></p>
+    <p class="uppercase font-normal text-xl md:text-2xl">
+      Stone, Metal, Wood, Marble, Concrete, Mixed media, Modern materials,
+      Plastics, Plaster, Painted surfaces, Fine silver, Bronze, Wooden objects
+    </p>
     <!-- <div class="flex flex-col">
       <div class="flex">
         <Icon ctx="brush" size="10em" nostroke />
@@ -11,21 +15,26 @@ import Icon from "./Icon.astro";
       <Icon ctx="feather" nostroke size="20em" />
     </div> -->
   </aside>
-  <div class="div grow flex flex-col items-center">
+  <div class="div grow flex flex-col items-center order-3">
     <div
-      class="flex grow flex-col justify-center items-center gap-2 capitalize font-bricolage text-6xl"
+      class="flex grow flex-col justify-end items-center gap-2 capitalize font-bricolage text-6xl"
     >
-      <span class="">stonework</span>
-      <span class="">sculpture</span>
-      <span class=""> metal work</span>
-      <span class="">plaster</span>
-      <span class="">painted surfaces</span>
     </div>
     <span class="shrink-0"
       >© 2026 Anna Taylor Conservation. All rights reserved.</span
     >
   </div>
-  <aside class="shrink-0 relative">
+  <aside
+    class="shrink-0 flex flex-col items-end order-1 md:order-3 justify-end"
+  >
+    <div class="info flex flex-col items-end">
+      <p class="uppercase">Anna Taylor</p>
+      <a href="tel:07807954999">+447807954999</a>
+      <a href="mailto:annataylorconservation@gmail.com"
+        >annataylorconservation@gmail.com</a
+      >
+    </div>
+
     <!-- <Icon ctx="ladder" size="20em" nostroke />
     <Icon ctx="cube" size="8em" nostroke /> -->
   </aside>

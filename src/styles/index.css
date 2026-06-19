@@ -15,11 +15,11 @@ body {
   width: 100%;
 }
 body {
-  @apply bg-rose-50;
+  /*@apply bg-rose-50;*/
 }
 
 p {
-  @apply font-secondary;
+  /*@apply font-secondary;*/
 }
 
 section {

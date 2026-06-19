@@ -2,10 +2,12 @@
   --font-noto: "Noto Serif", serif;
   --font-roboto: "Roboto", sans-serif;
   --font-manrope: "Manrope", sans-serif;
+  --font-nunitio: "Nunito", sans-serif;
   --font-overpass-mono: "Overpass Mono", sans-serif;
 }
 
 @theme {
+  --font-single: var(--font-roboto);
   --font-bricolage: "Bricolage Grotesque", sans-serif;
   --font-limelight: "Limelight", sans-serif;
   --font-display: "Major Mono Display", monospace;

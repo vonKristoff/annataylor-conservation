@@ -12,13 +12,14 @@
   --primary: oklch(from var(--hue-7) l c h);
   --pop: oklch(from var(--hue-6) l c h);
   --accent: oklch(from var(--hue-5) l c h);
-  --grey: oklch(from var(--hue-2) l c h);
+  --grey: #efefef;
   --white: var(--mono-0);
   --black: var(--mono-1);
 }
 
 @theme inline {
   --color-black: var(--black);
+  --color-grey: var(--grey);
   --color-white: var(--white);
   --color-black-off: oklch(from var(--black) calc(l + 0.2) c h);
   --color-white-off: oklch(from var(--white) calc(l - 0.2) c h);
