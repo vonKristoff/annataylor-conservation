@@ -12,7 +12,7 @@
   --primary: oklch(from var(--hue-7) l c h);
   --pop: oklch(from var(--hue-6) l c h);
   --accent: oklch(from var(--hue-5) l c h);
-  --grey: #efefef;
+  --grey: #f3f3f3;
   --white: var(--mono-0);
   --black: var(--mono-1);
 }
