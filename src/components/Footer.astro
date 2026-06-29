@@ -1,19 +1,18 @@
+---
+import Logo from "$lib/assets/nfk.svg?url";
+---
+
 <footer
-  class="p-12 bg-primary-200 text-amber-100 justify-bottom gap-12 grid grid-cols-1 md:grid-cols-3"
+  class="px-8 md:p-12 text-primary-200 justify-bottom gap-12 grid grid-cols-1 md:grid-cols-3"
 >
   <aside class="shrink-0 flex flex-col order-3 md:order-1">
-    <p>Survey and Treatment of objects.</p>
-    <p><span class="text-primary-300">Including works fabricated in:</span></p>
-    <p class="uppercase font-normal text-xl md:text-2xl">
-      Stone, Metal, Wood, Marble, Concrete, Mixed media, Modern materials,
-      Plastics, Plaster, Painted surfaces, Fine silver, Bronze, Wooden objects
-    </p>
     <!-- <div class="flex flex-col">
       <div class="flex">
         <Icon ctx="brush" size="10em" nostroke />
       </div>
       <Icon ctx="feather" nostroke size="20em" />
     </div> -->
+    <img src={Logo} alt="NFK logo" class="w-1/2 self-end md:self-start" />
   </aside>
   <div class="div grow flex flex-col items-center order-3">
     <div
