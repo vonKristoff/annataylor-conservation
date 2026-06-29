@@ -1,14 +1,14 @@
 ---
 import Icon from "./Icon.astro";
 const currentPath = Astro.url.pathname;
-const isHome = currentPath === "/" || currentPath === "";
+// const isHome = currentPath === "/" || currentPath === "";
 
 const pageTitles = {
   gallery: "GALLERY",
 };
-const getPageTitle = () => {
+const isHome = () => {
   const slug = currentPath.split("/").pop() || "";
-  return pageTitles[slug] || slug.replace(/-/g, " ");
+  return slug === "";
 };
 ---
 
@@ -24,11 +24,11 @@ const getPageTitle = () => {
   <div
     class="grow flex font-bricolage text-primary-200 text-4xl justify-center"
   >
-    <!-- <span>{getPageTitle()}</span> -->
+    <!-- <span>{isHome()}</span> -->
   </div>
-  <aside class="shrink-0 relative font-light text-primary-200 pr-4">
+  <aside class="shrink-0 relative font-light text-primary-200">
     {
-      getPageTitle() !== "GALLERY" && (
+      isHome() && (
         <a class="link" href="/gallery">
           GALLERY
         </a>
